@@ -1,0 +1,14 @@
+<!--Home page - detail for one post-->
+{% extends 'blog/base.html' %}
+
+{% block content %}
+    <div class="post">
+      {% if post.published_date %}
+        <div class="date">
+            <p>published: {{ post.published_date }}</p>
+        </div>
+      {% endif %}
+      <h1>{{ post.title }}</h1>
+      <p>{{ post.text|linebreaksbr }}</p>
+    </div>
+{% endblock %}
